@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid Anwar</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header" class="head">
+        <div class="container">
+            <nav>
+                <img src="" class="logo"> <!--insert logo similar to kevin-->
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i> <!-- cross icon -->
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> <!-- menu icon -->
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Junaid</span> from Delhi</h1>
+                <div class="portImg">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------about--------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="myImage" src="/images/junaid1.jpg"> <!--insert image-->
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I’m Md Junaid Anwar, a passionate B.Tech CSE student at Jamia Hamdard with a strong interest in
+                        web development and data structure and algo.
+                        I enjoy building responsive websites and real-world projects that solve practical problems.
+                        Currently working on a personal portfolio website using html, css and js for my college project.
+                        I’m also an IEEE member, always eager to learn and grow in the tech field.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Database Management</span><br>My SQL & SQL Queries</li>
+                            <li><span>problem solving</span><br>Data Structure & Algorithm</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023 - current</span><br>IEEE member at JH</li>
+                            <li><span>2022-2023</span><br>working on a project related to solar water heater at JMI</li>
+                            <li><span>2019-2023</span><br>NSS volunteer at JMI</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023</span><br>BTech student at JH</li>
+                            <li><span>2022</span><br>Diploma Engg. from JMI</li>
+                            <li><span>2019</span><br>St. Convent School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------services----------->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Development</h2>
+                    <p>Building responsive and dynamic websites using HTML, CSS, JavaScript, and backend integration.
+                    </p>
+                    <a href="/learn-more.html">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing intuitive user interfaces and smooth user experiences to make web and mobile apps
+                        user-friendly.</p>
+                    <a href="/learn-more.html">Learn more</a>
+                </div>
+                <div>
+                    <h2>Portfolio & Resume Websites</h2>
+                    <p>Creating personal portfolio and resume websites to showcase skills, projects, and professional
+                        achievements.</p>
+                    <a href="/learn-more.html">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------portfolio------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store</p>
+                        <a href="#"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store</p>
+                        <a href="#"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store</p>
+                        <a href="#"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!---------------------contact----------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-envelope"></i> junaidanwar188@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 8709647452</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fas fa-globe"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="your name" required>
+                        <input type="email" name="email" placeholder="your email" required>
+                        <textarea name="message" rows="5" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright &copy; Junaid Anwar 2025</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
