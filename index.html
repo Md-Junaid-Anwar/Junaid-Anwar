@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junaid Anwar</title>
-    <!-- Font Awesome CDN -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -15,19 +15,19 @@
     <div id="header" class="head">
         <div class="container">
             <nav>
-                <img src="" class="logo"> <!--insert logo similar to kevin-->
+                <img src="" class="logo"> 
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i> <!-- cross icon -->
+                    <i class="fas fa-times" onclick="closemenu()"></i> 
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i> <!-- menu icon -->
+                <i class="fas fa-bars" onclick="openmenu()"></i> 
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
+                <p>web Developer</p>
                 <h1>Hi, I'm <span>Junaid</span> from Delhi</h1>
                 <div class="portImg">
 
@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img class="myImage" src="images/junaid1.jpg"> <!--insert image-->
+                    <img class="myImage" src="/images/junaid.png"> 
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -60,7 +60,7 @@
                         <ul>
                             <li><span>Web Development</span><br>Web app Development</li>
                             <li><span>Database Management</span><br>My SQL & SQL Queries</li>
-                            <li><span>problem solving</span><br>Data Structure & Algorithm</li>
+                            <li><span>Problem Solving</span><br>Data Structure & Algorithm</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Experience">
@@ -152,20 +152,21 @@
                     <p><i class="fas fa-envelope"></i> junaidanwar188@gmail.com</p>
                     <p><i class="fas fa-phone"></i> 8709647452</p>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/md-junaid-anwar-92a6081a6" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Md-Junaid-Anwar" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/anwar.jnd?igsh=azI3MTdxM21uamZq" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://md-junaid-anwar.github.io/Junaid-Anwar/" target="_blank"><i class="fas fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/md-junaid-anwar-92a6081a6"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Md-Junaid-Anwar"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/anwar.jnd?igsh=azI3MTdxM21uamZq"><i class="fab fa-instagram"></i></a>
+                        <a href="https://md-junaid-anwar.github.io/Junaid-Anwar/"><i class="fas fa-globe"></i></a>
                     </div>
-                    <a href="https://drive.google.com/file/d/1gjLxYVLePKG-3VtGksliAfUZbc_E62QC/view?usp=sharing" download class="btn btn2" target="_blank">Download CV</a>
+                    <a href="https://drive.google.com/file/d/1gjLxYVLePKG-3VtGksliAfUZbc_E62QC/view?usp=sharing" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="your name" required>
                         <input type="email" name="email" placeholder="your email" required>
                         <textarea name="message" rows="5" placeholder="your message"></textarea>
                         <button type="submit" class="btn btn2">submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -199,6 +200,24 @@
             sidemenu.style.right = "-200px";
         }
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw4EovGqJ7QSExOBOliS0IFn_SHezL44tbOzp_bzStb4zMjSfx7qk2usygZmUpphcs/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)  
+                form.reset()                                         
+            })                                         
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 
 </html>
